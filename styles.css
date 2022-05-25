@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    padding: 5% 0 3% 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px rgb(195, 195, 195);
+    box-shadow: 0px 3px 0px rgb(220, 220, 220);
+}
+
+.logo-img {
+    width: 40%;
+}
+
+git config --global user.email "hadib200@gmail.com"
+git config --global user.name "kingswisdom"
+
+.location {
+    background-color: rgb(220, 220, 220);
+    padding: 3.5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.location .icon {
+    position:absolute;
+    left: 26%;
+}
+
+.splash {
+    padding: 9% 4% 11% 4%;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.splash .title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.splash .subtitle {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.splash .callToAction {
+    margin-top: 5%;
+    width: 60%;
+    padding: 4% 0 4% 0;
+    border-radius: 25px;
+    border: 0;
+    color: white;
+    box-shadow: 6px 6px 6px rgb(220, 220, 220);
+    background: rgb(152,98,153);
+    background: linear-gradient(180deg, rgba(152,98,153,0.9808298319327731) 0%, rgba(245,103,255,1) 0%, rgba(176,43,208,1) 100%);
+}
+
+.rules {
+    padding: 9% 4% 11% 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rules .rules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rules .rules-container .rule {
+    display: flex;
+    background-color: rgb(244, 244, 244);
+    padding: 6% 0 6% 0;
+    border-radius: 15px;
+    justify-content: center;
+    position: relative;    
+}
+
+.rules .rules-container .rule .rule-number {
+    color: white;
+    position: absolute;
+    padding: 11px;
+    left:-10px;
+    top:34%;
+    background-color: blueviolet;
+    border-radius: 25px;
+}
+
+.rules .rules-container .rule .rule-number .number {
+    font-size: 12px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.rules .rules-container .rule .rule-icon {
+    position: absolute;
+    left: 11%;
+}
