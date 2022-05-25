@@ -20,9 +20,6 @@ header{
     width: 40%;
 }
 
-git config --global user.email "hadib200@gmail.com"
-git config --global user.name "kingswisdom"
-
 .location {
     background-color: rgb(220, 220, 220);
     padding: 3.5%;
