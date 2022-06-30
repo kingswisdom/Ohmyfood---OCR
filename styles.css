@@ -13,7 +13,43 @@ header{
     position: relative;
     justify-content: center;
 }
-.back-button{
+
+.loading-screen {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+
+.loading-screen .spinner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 10px solid rgba(161, 160, 160, 0);
+    border-top: 10px solid #9356dc;
+    border-left: 10px solid #9356dc;
+    border-bottom: 10px solid #9356dc;
+    animation: spinneroff 0.8s 0.2s 3;
+}
+
+@keyframes fadeout {
+    0% { opacity: 1; }
+    100% { opacity: 0; position: unset;}
+}
+
+@keyframes spinneroff {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.back-button{ 
     position:absolute;
     left: 6%;
     font-size: 30px;
@@ -76,88 +112,116 @@ header{
     font-size: 20px;
     font-weight: 600;
     box-shadow: 6px 6px 6px rgb(220, 220, 220);
-    background: linear-gradient(171deg, #e361f9e0, #731f83);
+    background: linear-gradient(171deg, #FF79DA, #9356DC);
     opacity: 1;
+    transition-duration: 0.3s; 
+    transition-property: opacity, box-shadow;
     
 }
 
 .splash .callToAction:hover {
-    opacity: 0.9;
-    transition-duration: 0.3s;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.01);
+    
 }
 
-.rules {
+.contenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu .rules {
     padding: 12% 5% 11% 5%;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.rules h3 {
+.contenu .rules .rules-box {
+    display: flex;
+    flex-direction: column;
+    gap:28px;
+}
+
+.contenu .rules .rules-box h3 {
     font-size: 22px;
 }
 
-.rules .rules-container {
+.contenu .rules .rules-box .rules-container {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.rules .rules-container .rule {
+.contenu .rules .rules-box .rules-container .rule {
     display: flex;
     background-color: rgb(244, 244, 244);
-    padding: 6% 0 6% 0;
+    padding: 6% 6% 6% 12%;
     border-radius: 15px;
-    justify-content: center;
+    align-items: center;
     position: relative;  
-    box-shadow: 3px 6px 3px rgb(234, 234, 234);  
+    box-shadow: 3px 6px 3px rgb(234, 234, 234);
+    transition-duration: 0.3s;  
+    gap: 13%;
 }
 
-.rules .rules-container .rule .rule-number {
+
+.contenu .rules .rules-box .rules-container .rule:hover {
+    background-color: #e7c9ede0;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.01);
+} 
+
+.contenu .rules .rules-box .rules-container .rule .rule-number {
     color: white;
-    position: absolute;
     padding: 11px;
-    left:-10px;
-    top:34%;
-    background: linear-gradient(171deg, #d048e9e0, #731f83);
+    position: absolute;
+    
+    left:-3%;
+    background: linear-gradient(171deg, #FF79DA, #9356DC);
     border-radius: 25px;
 }
 
-.rules .rules-container .rule .rule-number .number {
+.contenu .rules .rules-box .rules-container .rule .rule-number .number {
     font-size: 12px;
     position: absolute;
     transform: translate(-50%, -50%);
 }
 
-.rules .rules-container .rule .rule-icon {
-    position: absolute;
-    left: 14%;
+.contenu .rules .rules-box .rules-container .rule .rule-icon {
+    font-size: 19px;
     color: rgb(99, 99, 99);
 }
 
-.rules .rules-container .rule .rule-text {
+.contenu .rules .rules-box .rules-container .rule .rule-text {
     font-weight: 500;
 }
 
-.stores {
+.contenu .stores {
     background-color: rgb(236, 236, 236);
     padding: 12% 5% 11% 5%;
+    
+}
+
+.contenu .stores .stores-box {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.stores h3 {
+.contenu .stores .stores-box h3 {
     font-size: 22px;
 }
 
-.stores .cards-container {
+.contenu .stores .stores-box .cards-container {
     display: flex;
     flex-direction: column;
     gap:25px;
 }
 
-.stores .cards-container .card {
+.contenu .stores .stores-box .cards-container .card {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -171,29 +235,59 @@ header{
     position: relative;
 }
 
-.stores .cards-container .card i {
-    position: absolute;
-    bottom: 10%;
-    right: 7%;
-    font-size: 30px;  
+.contenu .stores .stores-box .cards-container .card:hover {
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.01); 
+}
+
+.contenu .stores .stores-box .cards-container .card .favorite {
     
 }
 
-.stores .cards-container .card i:hover{
-    font-weight: 900;
-    background-image: linear-gradient(45deg, #d048e9, #731f83);
+.contenu .stores .stores-box .cards-container .card .favorite .heart-shallow {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    font-size: 30px;
+    
+    transition-duration: 0.3s;
+}
+
+.contenu .stores .stores-box .cards-container .card .favorite .heart-full {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    font-size: 30px;
+    opacity:0;
+    z-index: 2;
+    background-image: linear-gradient(45deg, #FF79DA, #9356DC);
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    transition-duration: 0.3s;
 }
 
-.new-tag::before{
+.contenu .stores .stores-box .cards-container .card .favorite .heart-shallow:hover{
+    opacity:0;
+}
+
+.contenu .stores .stores-box .cards-container .card .favorite .heart-full:hover{
+    opacity:1;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.1);
+}
+
+
+
+.contenu .new-tag::before{
     position:absolute;
     content: "Nouveau";
-    background-color: #80b9a1;
-    color: #29852e;
+    background-color: #99E2D0;
+    color: #4ec4a7;
     right: 5%;
     top: 5%;
     padding: 6px 15px;
@@ -202,7 +296,7 @@ header{
     border-radius: 3px;
 }
 
-.stores .cards-container .card img {
+.contenu .stores .stores-box .cards-container .card img {
     aspect-ratio: 5/2;
     object-fit: cover;
     object-position: 0% 57%;
@@ -210,19 +304,19 @@ header{
     border-radius: 25px 25px 0 0;
 }
 
-.stores .cards-container .card .infos {
+.contenu .stores .stores-box .cards-container .card .infos {
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 4% 3%;
 }
 
-.stores .cards-container .card .infos .storeName {
+.contenu .stores .stores-box .cards-container .card .infos .storeName {
     font-size: 18px;
     font-weight: 600;
 }
 
-.stores .cards-container .card .infos .address {
+.contenu .stores .stores-box .cards-container .card .infos .address {
     font-size: 18px;
     font-weight: 300;
 }
@@ -239,7 +333,7 @@ header{
 .restaurant-menu {
     position: relative;
     margin-top: -50px;
-    z-index: 99;
+    z-index: 3;
     background-color: rgb(227, 227, 227);
     border-radius: 50px 50px 0 0;
     padding: 7% 5% 11% 5%;
@@ -256,78 +350,159 @@ header{
     font-weight: 500;
 }
 
-.restaurant-menu .title i {
+.restaurant-menu .title .favorite .heart-shallow {
     position: absolute;
-    right: 5%;
-    transform: translate(0, 12%);
+    bottom: 10%;
+    right: 7%;
     font-size: 30px;
+    
+    transition-duration: 0.3s;
 }
-
-.restaurant-menu .title i:hover {
-    font-weight: 900;
-    background-image: linear-gradient(45deg, #d048e9, #731f83);
+.restaurant-menu .title .favorite .heart-full {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    font-size: 30px;
+    opacity:0;
+    z-index: 2;
+    background-image: linear-gradient(45deg, #FF79DA, #9356DC);
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    transition-duration: 0.3s;
+}
+.restaurant-menu .title .favorite .heart-shallow:hover{
+    opacity:0;
+}
+.restaurant-menu .title .favorite .heart-full:hover{
+    opacity:1;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.1);
 }
 
-.restaurant-menu .subset {
+.restaurant-menu .menu-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+.restaurant-menu .menu-container .subset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadein 0.3s;
+}
 
-.restaurant-menu .subset .subtitle{
+.restaurant-menu .menu-container .subset .subtitle{
     margin-left: 7px;
     padding-bottom: 4px;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 300;
-    border-bottom: solid 3px #5adcc6;
+    border-bottom: solid 3px #99E2D0;
     width: 35px;
 }
-.restaurant-menu .subset .cards-container {
+.restaurant-menu .menu-container .subset .cards-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    animation: fadein 0.3s;
        
 }
 
-@keyframes fadein {
-    0% { opacity: 0; transform: translateY(25%); }
-    100% { opacity: 1; transform: translateY(0%);}
+.restaurant-menu .menu-container .subset .cards-container .card-container {
+    display: flex;
 }
 
-.restaurant-menu .subset .card {
-    opacity: 1;
-    transition-duration: 5s;
-    background-color: white;
-    border-radius: 13px;
-    padding: 3%;
-    position: relative;
-    box-shadow: 6px 6px 6px #cdcdcd;
-    animation: fadein 2s;
+.hover-container {
+    width: 0%;
+    background-color: #99E2D0;    
+    transition-duration: 0.3s;
+    border-radius: 0 13px 13px 0;
     
 }
 
-.restaurant-menu .subset .card .infos {
+.hover-container .animation-added {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hover-container .animation-added i {
+    opacity: 0;
+    top: 22px;
+    right: -19px;
+    font-size: 33px;
+    color: white;
+    
+}
+
+
+.restaurant-menu .card-1 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;    
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards;
+    transition-duration: 0.3s; 
+    transition-property: width;
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-1:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-1:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-1:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+
+
+.restaurant-menu .card-1 .infos {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
 }
 
-.restaurant-menu .subset .card .infos .dishName {
+.restaurant-menu .card-1 .infos .dishName {
     font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.restaurant-menu .subset .card .infos .dishDescription {
+.restaurant-menu .card-1 .infos .dishDescription {
     font-size: 16px;
     font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.restaurant-menu .subset .card .dishPrice {
+.restaurant-menu .card-1 .dishPrice {
     position: absolute;
     right: 1%;
     bottom: 3%;
@@ -336,12 +511,710 @@ header{
     font-weight: 600;
 }
 
+
+.restaurant-menu .card-2 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 0.3s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;      
+}
+
+.restaurant-menu .card-2:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-2:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-2:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-2 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-2 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-2 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-2 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-3 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 0.6s;
+    transition-duration: 0.3s; 
+    transition-property: width;    
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-3:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-3:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-3:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-3 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-3 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-3 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-3 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-4 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 0.9s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-4:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-4:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-4:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-4 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-4 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-4 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-4 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-5 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 1.2s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-5:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-5:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-5:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-5 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-5 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-5 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-5 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-6 {
+    width: 94%;
+    opacity:0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 1.5s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-6:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-6:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-6:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-6 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-6 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-6 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-6 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-7 {
+    width: 94%;
+    opacity: 0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 1.8s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-7:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-7:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-7:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-7 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-7 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-7 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-7 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-8 {
+    width: 94%;
+    opacity: 0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 2.1s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-8:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-8:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-8:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-8 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-8 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-8 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-8 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-9 {
+    width: 94%;
+    opacity: 0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 2.4s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-9:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-9:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-9:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-9 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-9 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-9 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-9 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-10 {
+    width: 94%;
+    opacity: 1;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 2.7s;
+    transition-duration: 0.3s; 
+    transition-property: width; 
+    overflow: hidden;  
+}
+
+.restaurant-menu .card-10:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-10:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-10:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-10 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-10 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-10 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-10 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.restaurant-menu .card-11 {
+    width: 94%;
+    opacity: 0;
+    background-color: white;
+    border-radius: 13px;
+    padding: 3%;
+    position: relative;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    animation: fadein 0.3s forwards; 
+    animation-delay: 3s;
+    transition-duration: 0.3s; 
+    transition-property: width;  
+    overflow: hidden;    
+}
+
+.restaurant-menu .card-11:hover {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    
+}
+
+.restaurant-menu .card-11:hover ~ .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+
+
+}
+
+.restaurant-menu .card-11:hover ~ .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .card-11 .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 79%;
+}
+
+.restaurant-menu .card-11 .infos .dishName {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-11 .infos .dishDescription {
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-menu .card-11 .dishPrice {
+    position: absolute;
+    right: 1%;
+    bottom: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0px);}
+}
+
+/*ajouter overflow:hidden */
+
 .restaurant-menu .order-button {
     align-self: center;
     margin-top: 5%;
     margin-bottom: 15%;
-    width: 54%;
-    padding: 16px 30px;
+    
+    padding: 18px 45px;
     border-radius: 50px;
     border: 0;
     color: white;
@@ -349,13 +1222,15 @@ header{
     font-weight: 500;
     box-shadow: 6px 6px 6px rgb(185 185 185);
     background: rgb(152,98,153);
-    background: linear-gradient(171deg, #d048e9e0, #731f83);
+    background: linear-gradient(171deg, #FF79DA, #9356DC);
     opacity:1;
+    transition-duration: 0.3s;
 }
 
 .restaurant-menu .order-button:hover{
-    opacity:0.9;
-    transition-duration: 0.3s;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+    transform: scale(1.01);
 }
 
 /*footer*/
@@ -402,3 +1277,169 @@ footer .footer_title{
     font-family: 'Shrikhand', cursive;
     font-size: 20px;
 }
+
+@media all and (min-width: 768px) and (max-width: 992px) { /*768px < resolution < 992px*/
+
+    .logo-container {
+        padding: 3% 0 3% 0;
+    }
+
+    .logo-img {
+        width: 30%;
+    }
+    
+    .location {
+        padding: 1.5%;
+    }
+
+    .location .icon {
+        left: 39%;
+    }
+    
+    .splash .callToAction {
+        margin-top: 9%;
+    }
+
+
+    .contenu .rules {
+        padding: 5%
+    }
+
+    .contenu .rules .rules-box .rules-container {
+        gap: 28px;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .contenu .rules .rules-box .rules-container .rule {
+        padding: 3% 6%;
+        border-radius: 25px;
+    }
+
+    .contenu .stores {
+        padding: 10% 5% 11% 5%;
+    }
+
+    .contenu .stores .stores-box .cards-container {
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+    .contenu .stores .stores-box .cards-container .card {
+        width: 45%;
+    }
+
+    footer .logo-line a {
+        margin-left: 5%;
+    }
+
+}
+
+@media all and (min-width: 993px) {
+
+    .logo-container {
+        padding: 2% 0 2% 0;
+    }
+
+    .logo-img {
+        width: 13%;
+    }
+
+    .location {
+        padding: 1.5%;
+    }
+
+    .location .icon {
+        left: 41%;
+    }
+
+    .logo-container {
+    }
+
+    .splash {
+        padding: 9% 4% 11% 4%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+    }
+
+    .splash .callToAction {
+        padding: 18px 37px;
+    }
+
+    .contenu .rules {
+        padding: 5%;
+    }
+
+    .contenu .rules .rules-box .rules-container {
+        gap: 28px;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .contenu .rules .rules-box .rules-container .rule {
+        padding: 2% 6%;
+        border-radius: 25px;
+        width: 100%;
+    }
+
+    .contenu .stores {
+        padding: 5%;
+    }
+
+    .contenu .stores .stores-box .cards-container {
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+    .contenu .stores .stores-box .cards-container .card {
+        width: 45%;
+    }    
+
+    footer {
+        padding: 3% 2% 5% 3%;
+    }
+
+    footer .logo-line a {
+        margin-left: 3%;
+    }
+
+    .restaurant-background img {
+        aspect-ratio: 3/1;
+    }
+
+    .restaurant-menu {
+        padding: 4% 5% 3% 5%;
+        gap: 43px;
+    }
+
+    .restaurant-menu .menu-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0px;
+        width: 100%;
+
+    }
+
+    .restaurant-menu .order-button {
+        margin-top: 3%;
+        margin-bottom: 5%;
+        width:unset;
+        padding: 18px 45px;
+    }
+
+    .restaurant-menu .menu-container .subset {
+        width: 27%;
+
+
+    }
+
+
+
+}
+
+
+
