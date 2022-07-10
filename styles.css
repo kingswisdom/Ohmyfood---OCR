@@ -416,6 +416,98 @@ header{
     display: flex;
 }
 
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .hover-container {
+    width: 25%;
+    box-shadow: 6px 6px 6px #cdcdcd;
+    transition-duration: 0.5s; 
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .hover-container .animation-added i {
+    right: 50%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 0.5s; 
+    transition-property: right, opacity, transform  ;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-1 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-2 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-3 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-4 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-5 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-6 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-7 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-8 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-9 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-10 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
+.restaurant-menu .menu-container .subset .cards-container .card-container:hover .card-11 {
+    width: 75%;    
+    border-radius: 13px 0 0 13px;
+    box-shadow: 0px 6px 6px #cdcdcd;
+    transition-duration: 0.4s;
+}
+
 .hover-container {
     width: 0%;
     background-color: #99E2D0;    
@@ -450,32 +542,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards;
-    transition-duration: 0.3s; 
+    transition-duration: 40ms; 
     transition-property: width;
     overflow: hidden;  
-}
-
-.restaurant-menu .card-1:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
-
-.restaurant-menu .card-1:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-1:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
 }
 
 
@@ -521,34 +590,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 0.3s;
-    transition-duration: 0.3s; 
+    animation-delay: 50ms;
+    transition-duration: 40ms; 
     transition-property: width; 
     overflow: hidden;      
 }
 
-.restaurant-menu .card-2:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-2:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-2:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-2 .infos {
     display: flex;
@@ -590,33 +638,10 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 0.6s;
-    transition-duration: 0.3s; 
+    animation-delay: 100ms
+    transition-duration: 40ms;
     transition-property: width;    
     overflow: hidden;  
-}
-
-.restaurant-menu .card-3:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
-
-.restaurant-menu .card-3:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-3:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
 }
 
 .restaurant-menu .card-3 .infos {
@@ -659,34 +684,12 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 0.9s;
-    transition-duration: 0.3s; 
+    animation-delay: 150ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-4:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
-
-.restaurant-menu .card-4:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-4:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-4 .infos {
     display: flex;
@@ -728,34 +731,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 1.2s;
-    transition-duration: 0.3s; 
+    animation-delay: 200ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-5:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-5:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-5:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-5 .infos {
     display: flex;
@@ -797,34 +779,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 1.5s;
-    transition-duration: 0.3s; 
+    animation-delay: 250ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-6:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-6:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-6:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-6 .infos {
     display: flex;
@@ -866,34 +827,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 1.8s;
-    transition-duration: 0.3s; 
+    animation-delay: 300ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-7:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-7:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-7:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-7 .infos {
     display: flex;
@@ -935,34 +875,12 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 2.1s;
-    transition-duration: 0.3s; 
+    animation-delay: 350ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-8:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
-
-.restaurant-menu .card-8:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-8:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-8 .infos {
     display: flex;
@@ -1004,34 +922,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 2.4s;
-    transition-duration: 0.3s; 
+    animation-delay: 400ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-9:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-9:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-9:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-9 .infos {
     display: flex;
@@ -1073,34 +970,13 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 2.7s;
-    transition-duration: 0.3s; 
+    animation-delay: 450ms;
+    transition-duration: 40ms;
     transition-property: width; 
     overflow: hidden;  
 }
 
-.restaurant-menu .card-10:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
 
-.restaurant-menu .card-10:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-10:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
-}
 
 .restaurant-menu .card-10 .infos {
     display: flex;
@@ -1142,33 +1018,10 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 3s;
-    transition-duration: 0.3s; 
+    animation-delay: 500ms;
+    transition-duration: 40ms;
     transition-property: width;  
     overflow: hidden;    
-}
-
-.restaurant-menu .card-11:hover {
-    width: 75%;    
-    border-radius: 13px 0 0 13px;
-    box-shadow: 0px 6px 6px #cdcdcd;
-    
-}
-
-.restaurant-menu .card-11:hover ~ .hover-container {
-    width: 25%;
-    box-shadow: 6px 6px 6px #cdcdcd;
-
-
-}
-
-.restaurant-menu .card-11:hover ~ .hover-container .animation-added i {
-    right: 50%;
-    transform: translate(0%, -50%);
-    opacity: 1;
-    transform: rotate(360deg);
-    transition-duration: 0.5s; 
-    transition-property: right, opacity, transform  ;
 }
 
 .restaurant-menu .card-11 .infos {
@@ -1207,7 +1060,6 @@ header{
     100% { opacity: 1; transform: translateY(0px);}
 }
 
-/*ajouter overflow:hidden */
 
 .restaurant-menu .order-button {
     align-self: center;
