@@ -300,7 +300,6 @@ header{
     aspect-ratio: 5/2;
     object-fit: cover;
     object-position: 0% 57%;
-    height: 100%;
     border-radius: 25px 25px 0 0;
 }
 
