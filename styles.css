@@ -115,7 +115,7 @@ header{
     background: linear-gradient(171deg, #FF79DA, #9356DC);
     opacity: 1;
     transition-duration: 0.3s; 
-    transition-property: opacity, box-shadow;
+    transition-property: opacity, box-shadow, transform, filter;
     
 }
 
@@ -637,7 +637,7 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 100ms
+    animation-delay: 100ms;
     transition-duration: 40ms;
     transition-property: width;    
     overflow: hidden;  
