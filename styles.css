@@ -963,7 +963,7 @@ header{
 
 .restaurant-menu .card-10 {
     width: 94%;
-    opacity: 1;
+    opacity: 0;
     background-color: white;
     border-radius: 13px;
     padding: 3%;
