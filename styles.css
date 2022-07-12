@@ -541,8 +541,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards;
-    transition-duration: 40ms; 
-    transition-property: width;
+    transition-delay: 50ms;
+    transition-duration: 60ms; 
+    transition-property: width, transform;
     overflow: hidden;  
 }
 
@@ -589,9 +590,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 50ms;
-    transition-duration: 40ms; 
-    transition-property: width; 
+    animation-delay: 120ms;
+    transition-duration: 60ms; 
+    transition-property: width, transform; 
     overflow: hidden;      
 }
 
@@ -637,9 +638,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 100ms;
-    transition-duration: 40ms;
-    transition-property: width;    
+    animation-delay: 190ms;
+    transition-duration: 60ms;
+    transition-property: width, transform;    
     overflow: hidden;  
 }
 
@@ -683,9 +684,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 150ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 260ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -730,9 +731,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 200ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 340ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -778,9 +779,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 250ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 410ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -826,9 +827,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 300ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 480ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -874,9 +875,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 350ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 550ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -921,9 +922,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 400ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 620ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -969,9 +970,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 450ms;
-    transition-duration: 40ms;
-    transition-property: width; 
+    animation-delay: 710ms;
+    transition-duration: 60ms;
+    transition-property: width, transform; 
     overflow: hidden;  
 }
 
@@ -1017,9 +1018,9 @@ header{
     position: relative;
     box-shadow: 6px 6px 6px #cdcdcd;
     animation: fadein 0.3s forwards; 
-    animation-delay: 500ms;
-    transition-duration: 40ms;
-    transition-property: width;  
+    animation-delay: 780ms;
+    transition-duration: 60ms;
+    transition-property: width, transform;  
     overflow: hidden;    
 }
 
